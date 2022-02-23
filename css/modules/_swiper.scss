@@ -1,0 +1,44 @@
+.swiper-container {
+    overflow: hidden !important;
+    height: 700px;
+
+    @include sp {
+        height: 300px;
+    }
+}
+.swiper-slide {
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: transfrom 1.9s ease;
+
+    &-active {
+        & .hero-title {
+            opacity: 1;
+            transform: translate(-10%, -10%);
+        }
+    }
+}
+.hero {
+    &-title {
+        z-index: 2;
+        position: absolute;
+        bottom: 10%;
+        right: 15%;
+        transform: translate(-10%, calc(-10% + 20px));
+        color: $cWhite;
+        font-size: 120px;
+        opacity: 0;
+        transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
+        @include tab {
+            right: 5%;
+            bottom: 5%;
+        }
+        @include sp {
+            font-size: 60px;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.fulfilling-square-spinner,
+.fulfilling-square-spinner * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ローディング画面 */
+#loading {
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+}
+
+.fulfilling-square-spinner {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border: 4px solid #ff1d5e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: fulfilling-square-spinner-animation 4s infinite ease;
+    animation: fulfilling-square-spinner-animation 4s infinite ease;
+}
+
+.fulfilling-square-spinner .spinner-inner {
+    vertical-align: top;
+    display: inline-block;
+    background-color: #ff1d5e;
+    width: 100%;
+    opacity: 1;
+    -webkit-animation: fulfilling-square-spinner-inner-animation 4s infinite ease-in;
+    animation: fulfilling-square-spinner-inner-animation 4s infinite ease-in;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@-webkit-keyframes fulfilling-square-spinner-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fulfilling-square-spinner-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes fulfilling-square-spinner-inner-animation {
+    0% {
+        height: 0%;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes fulfilling-square-spinner-inner-animation {
+    0% {
+        height: 0%;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}

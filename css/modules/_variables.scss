@@ -1,0 +1,16 @@
+$cWhite: #fff;
+$cBlack: #333;
+$Border: 1px solid #333;
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.section-title {
+    font-size: 24px;
+}
+section {
+  @include tab {
+    max-width: 100%;
+  }
+}

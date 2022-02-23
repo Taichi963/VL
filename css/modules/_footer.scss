@@ -1,0 +1,109 @@
+.footer {
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include sp {
+        max-width: 90%;
+    }
+    &-logo {
+        margin: 140px 0 33px;
+
+        @include tab {
+            margin: 50px 0;
+            text-align: center;
+        }
+    }
+    &-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+        @include tab {
+            flex-direction: column;
+        }
+    }
+    .access {
+        width: 27%;
+        @include tab {
+            width: 100%;
+        }
+        &-items {
+            @include sp {
+                padding-bottom: 10px;
+            }
+            .access-item {
+                margin-bottom: 11px;
+                &:last-child {
+                    margin-bottom: 8px;
+                }
+            }
+            dt {
+                margin-right: 24px;
+            }
+            div {
+                display: flex;
+            }
+        }
+    }
+    address {
+        padding-bottom: 10%;
+
+        @include sp {
+            font-size: 14.5px;
+        }
+    }
+    &-nav {
+        width: 50%;
+        @include tab {
+            width: 100%;
+        }
+        .nav-items {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            @include tab {
+                width: 100%;
+            }
+            li {
+                padding-bottom: 36px;
+
+                &::after {
+                        content: '+';
+                        margin-left: 10%;
+                        margin-right: 80px;
+                }
+            }
+        }
+    }
+    .top {
+        transform: rotate(-90deg);
+        position: relative;
+        padding: 0 77px 0 0;
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        @include tab {
+            transform: none;
+        }
+        &::after {
+            content: '>';
+            display: block;
+            position: absolute;
+            top: 20%;
+            font-size: 16px;
+            bottom: -100px;
+            left: 100px;
+
+            @include tab {
+                top: 15px;
+                bottom: 0;
+                left: 100px;
+                transform: rotate(-90deg);   /* 回転 */
+                transform-origin: 0 0;      /* 左から0％、上から0％離れた点を基準点にする */
+            }
+        }
+    }
+}
